@@ -38,15 +38,7 @@
     "scripts": {
         "post-install-cmd": "App\\Console\\Installer::postInstall",
         "post-create-project-cmd": "App\\Console\\Installer::postInstall",
-        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
-        "check": [
-            "@test",
-            "@cs-check"
-        ],
-        "cs-check": "phpcs --colors -p  src/ tests/",
-        "cs-fix": "phpcbf --colors -p src/ tests/",
-        "stan": "phpstan.phar analyse src/",
-        "test": "phpunit --colors=always"
+        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump"
     },
     "prefer-stable": true,
     "config": {
