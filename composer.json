@@ -18,6 +18,7 @@
         "josegonzalez/dotenv": "^3.2",
         "phpstan/phpstan": "^0.12.25",
         "phpunit/phpunit": "^8.5",
+        "psalm/phar": "~3.11.2",
         "psy/psysh": "@stable"
     },
     "suggest": {
@@ -40,7 +41,11 @@
         "check": [
             "@cs-check",
             "@stan",
-            "@test"
+            "@analyse"
+        ],
+        "analyse": [
+            "@stan",
+            "@psalm"
         ],
         "cs-check": "phpcs -p ./src ./tests",
         "cs-fix": "phpcbf -p ./src ./tests",
@@ -49,7 +54,9 @@
         "stan-rebuild-baseline": "phpstan analyse --configuration phpstan.neon --error-format baselineNeon src/ > phpstan-baseline.neon",
         "post-install-cmd": "App\\Console\\Installer::postInstall",
         "post-create-project-cmd": "App\\Console\\Installer::postInstall",
-        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump"
+        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
+        "psalm": "psalm.phar --show-info=false src/ ",
+        "psalm-rebuild-baseline": "psalm.phar --show-info=false  --set-baseline=psalm-baseline.xml  src/"
     },
     "prefer-stable": true,
     "config": {

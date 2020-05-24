@@ -136,7 +136,7 @@ class Installer
         }
 
         // Change the permissions on a path and output the results.
-        $changePerms = function ($path) use ($io) {
+        $changePerms = function ($path) use ($io): void {
             $currentPerms = fileperms($path) & 0777;
             $worldWritable = $currentPerms | 0007;
             if ($worldWritable == $currentPerms) {
@@ -151,7 +151,7 @@ class Installer
             }
         };
 
-        $walker = function ($dir) use (&$walker, $changePerms) {
+        $walker = function ($dir) use (&$walker, $changePerms): void {
             $files = array_diff(scandir($dir), ['.', '..']);
             foreach ($files as $file) {
                 $path = $dir . '/' . $file;

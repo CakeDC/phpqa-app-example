@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "820bad4147bb341428100fd2b93ca5d2",
+    "content-hash": "a8c2000e6b958246dad2e74a0ffdeb98",
     "packages": [
         {
             "name": "aura/intl",
@@ -3182,6 +3182,37 @@
                 "xunit"
             ],
             "time": "2020-05-22T13:51:52+00:00"
+        },
+        {
+            "name": "psalm/phar",
+            "version": "3.11.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/psalm/phar.git",
+                "reference": "8b447609ff38a79e1a011f6351bedef08babe2fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/psalm/phar/zipball/8b447609ff38a79e1a011f6351bedef08babe2fe",
+                "reference": "8b447609ff38a79e1a011f6351bedef08babe2fe",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "conflict": {
+                "vimeo/psalm": "*"
+            },
+            "bin": [
+                "psalm.phar"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Composer-based Psalm Phar",
+            "time": "2020-05-11T14:04:47+00:00"
         },
         {
             "name": "psy/psysh",
