@@ -12,10 +12,12 @@
         "mobiledetect/mobiledetectlib": "^2.8"
     },
     "require-dev": {
+        "cakedc/cakephp-phpstan": "^1.0",
         "cakephp/bake": "^2.0.3",
         "cakephp/cakephp-codesniffer": "~4.1.0",
         "cakephp/debug_kit": "^4.0",
         "josegonzalez/dotenv": "^3.2",
+        "phpstan/extension-installer": "^1.0",
         "phpstan/phpstan": "^0.12.25",
         "phpunit/phpunit": "^8.5",
         "psalm/phar": "~3.11.2",
@@ -61,5 +63,6 @@
     "prefer-stable": true,
     "config": {
         "sort-packages": true
-    }
+    },
+    "minimum-stability": "dev"
 }
